@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cfdimovil.app" >
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.settings.ADD_ACCOUNT_SETTINGS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.cfdimovil.app.views.MainActivity"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/PopupTheme"
+            android:configChanges="orientation|screenSize"
+            android:name="com.cfdimovil.app.views.Concepto">
+        </activity>
+
+        <activity
+            android:theme="@style/PopupTheme"
+            android:configChanges="orientation|screenSize"
+            android:name="com.cfdimovil.app.views.Regimen">
+        </activity>
+
+        <activity
+            android:theme="@style/PopupTheme"
+            android:exported="true"
+            android:configChanges="orientation|screenSize"
+            android:name="com.cfdimovil.app.views.AbrirFactura">
+        </activity>
+
+        <activity
+            android:theme="@style/PopupTheme"
+            android:configChanges="orientation|screenSize"
+            android:name="com.cfdimovil.app.views.Impuestos">
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"
+            android:name="com.cfdimovil.app.views.ErroresAppengine">
+        </activity>
+
+        <activity
+            android:name="com.cfdimovil.app.views.Receptor"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".views.proceso.ResumenBorrador"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".views.proceso.DetalleBorrador"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name="com.cfdimovil.app.views.proceso.ResumenConceptos"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name="com.cfdimovil.app.views.proceso.Conceptos"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name="com.cfdimovil.app.views.proceso.Receptores"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <service android:name="com.cfdimovil.app.services.GcmIntentService" />
+        <receiver
+            android:name="com.cfdimovil.app.receivers.Notificacion"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.cfdimovil.app.receivers.ProcesoFacturar"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.cfdimovil.app.open.action.FACTURAR"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,268 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/background_list">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="170dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/build"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/build"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"/>
+
+            <LinearLayout
+                android:id="@+id/filter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:background="@color/transparent_black">
+
+                <com.cfdimovil.app.utils.RoundedImageView
+                    android:id="@+id/profile"
+                    android:src="@drawable/cfdi_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/razon"
+                android:textSize="14sp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:lines="2"
+                android:minLines="2"
+                android:maxLines="2"
+                android:text=" "
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_marginTop="130dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|left">
+
+                    <LinearLayout
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|left">
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Asignados:"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical|left"/>
+                        <TextView
+                            android:id="@+id/asignados"
+                            android:textSize="12sp"
+                            android:paddingLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/white"
+                            android:text="0"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical|left"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|left">
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Disponibles:"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical|left"/>
+                        <TextView
+                            android:id="@+id/disponibles"
+                            android:textSize="12sp"
+                            android:paddingLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical|left"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/facturar"
+                style="@style/boton_aceptar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/generar_factura"/>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/bg_card_inactive">
+
+                    <TextView
+                        android:id="@+id/clientes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Clientes"
+                        tools:ignore="HardcodedText"
+                        style="@style/titulo_dialog"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/bg_card_inactive">
+
+                    <TextView
+                        android:id="@+id/articulos"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Articulos"
+                        tools:ignore="HardcodedText"
+                        style="@style/titulo_dialog"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/bg_card_inactive">
+
+                    <TextView
+                        android:id="@+id/cotizaciones"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cotizaciones"
+                        tools:ignore="HardcodedText"
+                        style="@style/titulo_dialog"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/bg_card_inactive">
+
+                    <TextView
+                        android:id="@+id/facturas"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Facturas"
+                        tools:ignore="HardcodedText"
+                        style="@style/titulo_dialog"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/inicio"
+                style="@style/boton_aceptar"
+                android:paddingBottom="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inicia_session"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,589 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_list">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_card_inactive">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:text="Cliente"
+                    tools:ignore="HardcodedText"
+                    style="@style/titulo_dialog"
+                    android:layout_gravity="bottom"/>
+
+                <Button
+                    android:id="@+id/cliente"
+                    style="@style/boton_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:text="@string/editar"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="12dp"
+                android:background="@drawable/linea_azul"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nombre"
+                style="@style/FieldCard"
+                android:textColor="@color/gray50"
+                android:hint="Selecciona un cliente"
+                tools:ignore="HardcodedText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:baselineAligned="false"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_card_inactive">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:text="Documento"
+                        tools:ignore="HardcodedText"
+                        style="@style/titulo_dialog"
+                        android:layout_gravity="bottom"/>
+
+                    <Button
+                        android:id="@+id/datos"
+                        style="@style/boton_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:text="@string/editar"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="12dp"
+                    android:background="@drawable/linea_azul"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_tipoDeComprobante"
+                        android:baselineAligned="false">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/tipoDeComprobante"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_lugarExpedicion"
+                        android:baselineAligned="false">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/lugarDeExpedicion"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_formaDePago"
+                        android:baselineAligned="false">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/formaDePago"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_metodoDePago"
+                        android:baselineAligned="false">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/metodoDePago"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/leyend_numCtaPago"
+                        android:baselineAligned="false">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/numCtaPago"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_moneda"
+                        android:baselineAligned="false">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/moneda"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_tipoCambio"
+                        android:baselineAligned="false">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/tipoCambio"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/titulo_conceptos"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:text="Conceptos"
+                        tools:ignore="HardcodedText"
+                        style="@style/titulo_dialog"
+                        android:layout_gravity="bottom"/>
+
+                    <Button
+                        android:id="@+id/conceptos"
+                        style="@style/boton_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:text="@string/editar"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="12dp"
+                    android:background="@drawable/linea_azul"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/subtotal"
+                        android:baselineAligned="false">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/subtotal"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:text="Impuestos"
+                        tools:ignore="HardcodedText"
+                        style="@style/titulo_dialog"
+                        android:layout_gravity="bottom"/>
+
+                    <Button
+                        android:id="@+id/impuestos"
+                        style="@style/boton_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:text="@string/editar"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="12dp"
+                    android:background="@drawable/linea_azul"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_trasladados"
+                        android:baselineAligned="false">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/trasladados"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:text="@string/hint_retenidos"
+                        android:baselineAligned="false">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/retenidos"
+                        android:textColor="@color/gray50"
+                        tools:ignore="HardcodedText"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        android:gravity="right">
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="12dp"
+            android:background="@drawable/linea_azul"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    tools:ignore="HardcodedText"
+                    style="@style/titulo_dialog"/>
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:gravity="right"
+                    tools:ignore="HardcodedText"
+                    style="@style/titulo_dialog"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/eliminar"
+                style="@style/boton_eliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/eliminar"/>
+
+            <LinearLayout
+                android:id="@+id/divider"
+                android:layout_width="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/pdf"
+                style="@style/boton"
+                android:layout_width="0dp"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/generar_pdf"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/facturar"
+            style="@style/boton_aceptar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/generar_factura"/>
+
+    </LinearLayout>
+
+</ScrollView>
